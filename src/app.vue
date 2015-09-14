@@ -1,6 +1,9 @@
 <template lang="jade">
     div.container
         header
+            nav
+        main
+            progress
 </template>
 
 <style lang="stylus">
@@ -14,16 +17,29 @@
     .container
         width: 960px
         margin: 0 auto
+
+    header
+        height: 45px
+        width: 100%
+        border-bottom: 1px solid #ddd
+
+    main
+        margin-top: 10px
+
 </style>
 
 <script type="babel">
-    import header from './components/header.vue';
+    import nav from './components/nav.vue';
+    import progress from './components/progress.vue';
+    import timeline from './components/timeline.vue';
     export default {
         data() {
-            return {title : "hello world"};
+            return {title: "hello world"};
         },
         components: {
-            'header' : header
+            'nav': nav,
+            'progress': progress,
+            // 'timeline': timeline
         }
     };
 </script>
